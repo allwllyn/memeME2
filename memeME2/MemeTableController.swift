@@ -28,4 +28,17 @@ class MemeTableController: UITableViewController
         
         self.navigationController!.pushViewController(detailController, animated: true)
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memeTableCell", for:indexPath)
+        
+        let meme = (UIApplication.shared.delegate as! AppDelegate).myMemes[(indexPath as NSIndexPath).row]
+        
+        cell.textLabel?.text = meme.topText
+        cell.detailTextLabel?.text = meme.bottomText
+        cell.imageView?.image = meme.originalImage
+        
+        return cell
+    }
 }
