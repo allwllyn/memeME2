@@ -211,7 +211,7 @@
         <!--Meme Detail Controller-->
         <scene sceneID="lYX-6h-mX9">
             <objects>
-                <viewController id="haz-58-WpE" customClass="MemeDetailController" customModule="memeME2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailController" id="haz-58-WpE" customClass="MemeDetailController" customModule="memeME2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6en-2f-C5P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,6 +224,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="E6Y-hM-Qu8"/>
                     </view>
+                    <connections>
+                        <outlet property="detailView" destination="uWO-Ej-NTN" id="e7b-sQ-n3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNF-9y-DOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
