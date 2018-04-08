@@ -18,7 +18,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="memeME2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="baseController" id="BYZ-38-t0r" customClass="ViewController" customModule="memeME2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZXH-Sp-1L9"/>
                                     <barButtonItem systemItem="organize" id="oWE-Ov-gEP" userLabel="madeMemes">
                                         <connections>
-                                            <segue destination="4IO-On-9k5" kind="show" id="btk-2G-k9v"/>
+                                            <segue destination="4IO-On-9k5" kind="showDetail" id="9Mg-oK-zt8"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -114,6 +114,7 @@
         <scene sceneID="73a-jl-gy8">
             <objects>
                 <tabBarController id="4IO-On-9k5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NxK-7w-1Hd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YX7-Jz-Cba">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -230,9 +231,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNF-9y-DOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="143"/>
+            <point key="canvasLocation" x="2586" y="143"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Meme Table Controller-->
         <scene sceneID="lDd-mm-dni">
             <objects>
                 <tableViewController id="TEo-gY-ltA" customClass="MemeTableController" customModule="memeME2" customModuleProvider="target" sceneMemberID="viewController">
@@ -271,7 +272,7 @@
                             <outlet property="delegate" destination="TEo-gY-ltA" id="xsU-ZO-Ecq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="N3W-yj-u8q"/>
+                    <navigationItem key="navigationItem" id="N3W-yj-u8q"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozn-Vx-a9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
