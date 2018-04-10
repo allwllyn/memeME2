@@ -18,7 +18,7 @@ class memeCollectionViewController: UICollectionViewController
     override func viewDidLoad() {
         super .viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Maker", style: .plain, target:self, action: #selector(startOver))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target:self, action: #selector(startOver))
         
         let space: CGFloat = 3.0
         let widthDimension = (view.frame.size.width - (2*space)) / 3.0
@@ -31,7 +31,6 @@ class memeCollectionViewController: UICollectionViewController
   
     @objc func startOver()
     {
-        
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "baseController")
         
         self.present(controller!, animated: false, completion: nil)

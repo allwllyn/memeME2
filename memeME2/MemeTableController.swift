@@ -12,15 +12,29 @@ import UIKit
 class MemeTableController: UITableViewController
 {
     
-    var myMemes = (UIApplication.shared.delegate as! AppDelegate).myMemes
-    
-   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-   
-   {
-                return (UIApplication.shared.delegate as! AppDelegate).myMemes.count
+    override func viewDidLoad()
+    {
+        super .viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target:self, action: #selector(startOver))
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    var myMemes = (UIApplication.shared.delegate as! AppDelegate).myMemes
+    
+    @objc func startOver()
+    {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "baseController")
+        
+        self.present(controller!, animated: false, completion: nil)
+    }
+    
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+   {
+            return (UIApplication.shared.delegate as! AppDelegate).myMemes.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailController") as! MemeDetailController
         

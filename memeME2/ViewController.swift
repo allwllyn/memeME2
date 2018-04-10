@@ -61,7 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         [
             NSAttributedStringKey.strokeColor.rawValue : UIColor.black,
             NSAttributedStringKey.foregroundColor.rawValue : UIColor.white,
-            NSAttributedStringKey.font.rawValue: UIFont(name: "Helvetica", size: 50)!,
+            NSAttributedStringKey.font.rawValue: UIFont(name: "Helvetica", size: 60)!,
             NSAttributedStringKey.strokeWidth.rawValue : -3.0,
         ]
         
