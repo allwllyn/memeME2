@@ -16,7 +16,7 @@ class MemeTableController: UITableViewController
     {
         super .viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target:self, action: #selector(startOver))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Editor", style: .plain, target:self, action: #selector(startOver))
     }
     
     var myMemes = (UIApplication.shared.delegate as! AppDelegate).myMemes

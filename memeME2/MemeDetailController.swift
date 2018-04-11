@@ -19,5 +19,7 @@ class MemeDetailController: UIViewController
         super .viewDidLoad()
         
         self.detailView.image = meme.memedImage
+        
+        detailView.contentMode = .scaleAspectFit
     }
 }

@@ -18,16 +18,18 @@ class memeCollectionViewController: UICollectionViewController
     override func viewDidLoad() {
         super .viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target:self, action: #selector(startOver))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Editor", style: .plain, target:self, action: #selector(startOver))
         
         let space: CGFloat = 3.0
         let widthDimension = (view.frame.size.width - (2*space)) / 3.0
-        let heightDimension = (view.frame.size.height - (2*space)) / 6.0
+        let heightDimension = (view.frame.size.height - (2*space)) / 5.0
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: widthDimension, height: heightDimension)
     }
+    
+    var myMemes = (UIApplication.shared.delegate as! AppDelegate).myMemes
   
     @objc func startOver()
     {
@@ -35,8 +37,6 @@ class memeCollectionViewController: UICollectionViewController
         
         self.present(controller!, animated: false, completion: nil)
     }
-    
-    var myMemes = (UIApplication.shared.delegate as! AppDelegate).myMemes
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {

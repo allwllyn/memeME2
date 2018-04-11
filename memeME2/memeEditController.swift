@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class memeEditController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -29,13 +29,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
-        highText.text = "TOP"
-        configureText(text: highText)
+        configureText(text: highText, startText: "TOP")
         
-        lowText.text = "BOTTOM"
-        configureText(text: lowText)
+        configureText(text: lowText,startText: "BOTTOM")
         
         shareButton.isEnabled = false
+        
+        imageView.contentMode = .scaleAspectFit
     }
     
     // MARK: Subscribe to keyboard notifications
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // MARK: Configure the default text
-    func configureText (text: UITextField)
+    func configureText (text: UITextField, startText: String)
     {
         
         let memeTextAttributes: [String: Any] =
@@ -70,8 +70,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         text.enablesReturnKeyAutomatically = true
         text.defaultTextAttributes = memeTextAttributes
         text.textAlignment = .center
-       
-        textFieldShouldReturn(text)
+        text.autocapitalizationType = .allCharacters
+        text.text = startText
         
     }
     
@@ -122,7 +122,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
             imageView.image = image
-            self.dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
             shareButton.isEnabled = true
         }
     }
