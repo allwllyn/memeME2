@@ -57,15 +57,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xE0-Mr-d7A" userLabel="lowText">
-                                <rect key="frame" x="20" y="523" width="334" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="qHx-Pa-lMh"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVF-pM-URW" userLabel="hightText">
                                 <rect key="frame" x="20" y="94" width="335" height="80"/>
                                 <constraints>
@@ -75,26 +66,31 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xE0-Mr-d7A" userLabel="lowText">
+                                <rect key="frame" x="20" y="553" width="334" height="13"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cYY-pi-E1e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1zx-UF-zj7"/>
-                            <constraint firstItem="tgb-vY-UuZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2SO-7j-PUg"/>
-                            <constraint firstItem="tgb-vY-UuZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3vB-f6-Xw3"/>
+                            <constraint firstItem="xE0-Mr-d7A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7KN-V3-hEj"/>
                             <constraint firstItem="cYY-pi-E1e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bpe-5i-Ojf"/>
                             <constraint firstItem="tVF-pM-URW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dpx-4h-5MF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xE0-Mr-d7A" secondAttribute="trailing" constant="21" id="FKn-hA-Yj5"/>
+                            <constraint firstItem="cYY-pi-E1e" firstAttribute="top" secondItem="xE0-Mr-d7A" secondAttribute="bottom" constant="57" id="EAM-dR-ZUx"/>
                             <constraint firstItem="irn-j9-xxn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HUt-J2-NdP"/>
                             <constraint firstItem="irn-j9-xxn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Obd-ea-eGc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tVF-pM-URW" secondAttribute="trailing" constant="20" id="Pf1-Sx-niN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xE0-Mr-d7A" secondAttribute="trailing" constant="21" id="QYP-Qv-VKO"/>
                             <constraint firstItem="irn-j9-xxn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="T47-1s-yyf"/>
-                            <constraint firstItem="cYY-pi-E1e" firstAttribute="top" secondItem="xE0-Mr-d7A" secondAttribute="bottom" constant="20" id="cIw-lm-h6S"/>
+                            <constraint firstItem="tgb-vY-UuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VKs-RT-8en"/>
                             <constraint firstItem="tVF-pM-URW" firstAttribute="top" secondItem="irn-j9-xxn" secondAttribute="bottom" constant="20" id="ejv-Gj-bUs"/>
-                            <constraint firstItem="tgb-vY-UuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jGg-ed-ORx"/>
-                            <constraint firstItem="tgb-vY-UuZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nId-2x-jxf"/>
-                            <constraint firstItem="xE0-Mr-d7A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o45-XS-j0S"/>
+                            <constraint firstItem="tgb-vY-UuZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gB3-Ki-gD1"/>
+                            <constraint firstItem="tgb-vY-UuZ" firstAttribute="top" secondItem="irn-j9-xxn" secondAttribute="bottom" constant="10" id="thF-HQ-hrL"/>
+                            <constraint firstItem="cYY-pi-E1e" firstAttribute="top" secondItem="tgb-vY-UuZ" secondAttribute="bottom" constant="40" id="tyH-WP-OXJ"/>
                             <constraint firstItem="cYY-pi-E1e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vgi-b3-YQQ"/>
-                            <constraint firstItem="cYY-pi-E1e" firstAttribute="top" secondItem="tgb-vY-UuZ" secondAttribute="bottom" constant="40" id="zuE-bX-Hi6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -205,6 +201,7 @@
                     <navigationItem key="navigationItem" id="v1n-TK-1GQ"/>
                     <connections>
                         <outlet property="flowLayout" destination="Gk0-5R-y12" id="tlY-O4-n5u"/>
+                        <outlet property="memeCollectionView" destination="QlD-Ba-e7c" id="K7m-9p-iiF"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQt-QM-20o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -280,6 +277,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="N3W-yj-u8q"/>
+                    <connections>
+                        <outlet property="memeTableView" destination="ba5-Yq-ja0" id="zrw-tF-zHa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozn-Vx-a9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

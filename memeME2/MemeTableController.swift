@@ -12,6 +12,13 @@ import UIKit
 class MemeTableController: UITableViewController
 {
     
+    @IBOutlet var memeTableView: UITableView!
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        memeTableView.reloadData()
+    }
+    
     override func viewDidLoad()
     {
         super .viewDidLoad()
@@ -38,7 +45,7 @@ class MemeTableController: UITableViewController
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailController") as! MemeDetailController
         
-        detailController.meme = myMemes[(indexPath as NSIndexPath).row]
+        detailController.meme = (UIApplication.shared.delegate as! AppDelegate).myMemes[(indexPath as NSIndexPath).row]
         
         self.navigationController!.pushViewController(detailController, animated: true)
     }
