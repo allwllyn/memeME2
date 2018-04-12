@@ -36,6 +36,7 @@ class memeEditController: UIViewController, UIImagePickerControllerDelegate, UIN
         shareButton.isEnabled = false
         
         imageView.contentMode = .scaleAspectFit
+        
     }
     
     // MARK: Subscribe to keyboard notifications
@@ -54,6 +55,8 @@ class memeEditController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     // MARK: Configure the default text
+    
+    
     func configureText (text: UITextField, startText: String)
     {
         
@@ -73,6 +76,11 @@ class memeEditController: UIViewController, UIImagePickerControllerDelegate, UIN
         text.autocapitalizationType = .allCharacters
         text.text = startText
         
+    }
+    
+    @IBAction func cancelEditor(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool

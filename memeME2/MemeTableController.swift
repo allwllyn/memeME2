@@ -25,7 +25,7 @@ class MemeTableController: UITableViewController
     {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "baseController")
         
-        self.present(controller!, animated: false, completion: nil)
+        self.present(controller!, animated: true, completion: nil)
     }
     
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int

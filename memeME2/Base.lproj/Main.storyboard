@@ -38,9 +38,9 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="NYk-LB-FEj"/>
                                     <barButtonItem systemItem="camera" id="crr-Bi-YUg"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZXH-Sp-1L9"/>
-                                    <barButtonItem systemItem="organize" id="oWE-Ov-gEP" userLabel="madeMemes">
+                                    <barButtonItem systemItem="cancel" id="oWE-Ov-gEP" userLabel="madeMemes">
                                         <connections>
-                                            <segue destination="4IO-On-9k5" kind="showDetail" id="9Mg-oK-zt8"/>
+                                            <action selector="cancelEditor:" destination="BYZ-38-t0r" id="PsJ-dF-rZn"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
